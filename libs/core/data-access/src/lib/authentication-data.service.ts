@@ -1,5 +1,5 @@
 import { Injectable, computed, signal } from '@angular/core';
-import { AuthCredentials, AuthSession, AuthUser, UserRole } from '../../../models/src';
+import { AuthCredentials, AuthSession, AuthUser, UserRole } from '@support-dashboard/core/models';
 
 export const AUTH_SESSION_STORAGE_KEY = 'support-dashboard.auth.session';
 

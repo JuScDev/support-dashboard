@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { AuthenticationDataService, AUTH_SESSION_STORAGE_KEY } from './authentication-data.service';
-import { AuthSession } from '../../../models/src';
+import { AuthSession } from '@support-dashboard/core/models';
 
 const createService = (): AuthenticationDataService => {
   TestBed.resetTestingModule();

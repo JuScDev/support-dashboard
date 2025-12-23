@@ -1,7 +1,7 @@
 import { inject } from '@angular/core';
 import { CanActivateFn, Router } from '@angular/router';
 import { AuthenticationDataService } from './authentication-data.service';
-import { AuthGuardRouteData } from '../../../models/src';
+import { AuthGuardRouteData } from '@support-dashboard/core/models';
 
 const LOGIN_REDIRECT = '/login';
 const FORBIDDEN_REDIRECT = '/';

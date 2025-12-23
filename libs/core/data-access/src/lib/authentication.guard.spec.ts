@@ -8,7 +8,7 @@ import {
 } from '@angular/router';
 import { authGuard } from './authentication.guard';
 import { AuthenticationDataService } from './authentication-data.service';
-import { AuthGuardRouteData } from '../../../models/src';
+import { AuthGuardRouteData } from '@support-dashboard/core/models';
 
 @Component({ template: '' })
 class DummyComponent {}

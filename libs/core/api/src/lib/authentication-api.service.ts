@@ -1,6 +1,6 @@
 import { inject, Injectable } from '@angular/core';
-import { AuthenticationDataService } from '../../../data-access/src/';
-import { AuthCredentials, AuthUser, UserRole } from '../../../models/src/';
+import { AuthenticationDataService } from '@support-dashboard/core/data-access';
+import { AuthCredentials, AuthUser, UserRole } from '@support-dashboard/core/models';
 
 @Injectable({ providedIn: 'root' })
 export class AuthenticationApiService {

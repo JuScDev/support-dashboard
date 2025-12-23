@@ -25,6 +25,18 @@ export default [
           ],
         },
       ],
+      'no-restricted-imports': [
+        'error',
+        {
+          patterns: [
+            {
+              group: ['../**/src', '../**/src/**', './**/libs', './**/libs/**'],
+              message:
+                'Import other libraries via their alias (e.g. @support-dashboard/...) instead of relative paths into their src folders.',
+            },
+          ],
+        },
+      ],
     },
   },
   {
