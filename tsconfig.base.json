@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@support-dashboard/core/models": ["libs/core/models/src/index.ts"],
-      "@support-dashboard/core/data-access": ["libs/core/data-access/src/index.ts"]
+      "@support-dashboard/core/data-access": ["libs/core/data-access/src/index.ts"],
+      "@support-dashboard/core-api": ["libs/core/api/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
