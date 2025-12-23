@@ -20,7 +20,7 @@ export interface AuthCredentials {
 }
 
 export interface AuthGuardRouteData {
-  roles?: UserRole[];
+  roles?: Array<UserRole>;
   redirectTo?: string;
   forbiddenRedirectTo?: string;
 }

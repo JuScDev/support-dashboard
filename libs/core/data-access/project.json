@@ -1,7 +1,7 @@
 {
-  "name": "core-models",
+  "name": "core-data-access",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/core/models/src",
+  "sourceRoot": "libs/core/data-access/src",
   "prefix": "lib",
   "projectType": "library",
   "tags": [],
@@ -10,7 +10,7 @@
       "executor": "@nx/vitest:test",
       "outputs": ["{options.reportsDirectory}"],
       "options": {
-        "reportsDirectory": "../../../coverage/libs/core/core-models"
+        "reportsDirectory": "../../../coverage/libs/core/core-data-access"
       }
     },
     "lint": {
