@@ -1,5 +1,5 @@
 import nx from '@nx/eslint-plugin';
-import sheriff from '@softarc/eslint-plugin-sheriff'
+import sheriff from '@softarc/eslint-plugin-sheriff';
 
 export default [
   ...nx.configs['flat/base'],
@@ -7,7 +7,7 @@ export default [
   ...nx.configs['flat/javascript'],
   sheriff.configs.all,
   {
-    ignores: ['**/dist', '**/out-tsc'],
+    ignores: ['**/dist', '**/out-tsc', '**/vitest.config.*.timestamp*'],
   },
   {
     files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'],
