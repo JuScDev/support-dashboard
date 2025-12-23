@@ -33,10 +33,11 @@ Build a realistic, maintainable frontend application that demonstrates:
 
 ## 🏗 Architecture Overview
 
-- Feature-based structure
-- Clear module boundaries
-- Business logic lives in services and stores
-- UI components remain lean
+- Domain-driven design with bounded contexts for Tickets, Dashboard, and Users
+- Domain code lives in `libs/<domain>`; platform layers in `libs/core` (infrastructure) and `libs/shared` (UI/utils)
+- Apps compose domain libraries; keep business logic out of `apps/`
+- Clear module boundaries enforced by Sheriff
+- Business logic lives in services and stores; UI components remain lean
 
 ## 🧪 Testing Strategy
 
@@ -46,13 +47,15 @@ Build a realistic, maintainable frontend application that demonstrates:
 
 ## 📁 Workspace Structure
 
-apps/
-apps/support-app/
+- apps/
+  - support-app/ (shell that composes domain libs)
 
-libs/
-libs/core/
-libs/features/
-libs/shared/
+- libs/
+  - core/ (platform services: routing, auth, http, error handling)
+  - shared/ (design system, primitives, utilities)
+  - tickets/ (ticket domain: aggregates, stores, services)
+  - dashboard/ (dashboard domain: metrics, reporting views)
+  - users/ (user domain: profiles, roles, assignments)
 
 ## 📌 Case Study
 

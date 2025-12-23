@@ -16,18 +16,20 @@ This project is a **professional Angular 21 application** built with the followi
 
 ## Architecture Principles
 
-- Feature-based architecture
-- Clear separation of concerns
-- No cross-feature imports
-- Global state via Signal Stores
-- Local UI state via Signals
+- Domain-driven design with explicit bounded contexts
+- Domain libraries under `libs/` for Tickets, Dashboard, Users; platform libraries `core` and `shared`
+- Clear separation of concerns and boundaries enforced by Sheriff
+- No cross-domain imports except through approved contracts (e.g., shared types/services)
+- Global state via Signal Stores; local UI state via Signals
 - Business logic must NOT live in components
 
 ## Folder Rules
 
-- `features` may depend on `core` and `shared`
-- `core` must NOT depend on `features`
-- `shared` must NOT depend on `features`
+- Apps compose domain libraries; do not place business logic in `apps/`
+- Domain libs live in `libs/tickets`, `libs/dashboard`, `libs/users`
+- Platform libs live in `libs/core` (infrastructure, shell) and `libs/shared` (UI atoms/utilities)
+- Domain libs may depend on `core` and `shared`; avoid lateral domain-to-domain deps
+- `core` and `shared` must never depend on domain libs
 - All boundaries are enforced via Sheriff
 
 ## Coding Guidelines

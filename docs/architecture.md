@@ -2,8 +2,7 @@
 
 ## Core Principles
 
-- Feature-based architecture
-- Explicit boundaries between domains
+- Domain-driven design with explicit bounded contexts (Tickets, Dashboard, Users)
 - Predictable state management
 - Testable business logic
 
@@ -21,9 +20,11 @@
 
 ## Dependency Rules
 
-- Features may depend on Core and Shared
-- Core and Shared must never depend on Features
-- Enforced by Sheriff
+- Domain libs (`libs/tickets`, `libs/dashboard`, `libs/users`) may depend on `core` and `shared`
+- Avoid lateral domain-to-domain dependencies; use shared contracts when cross-domain data is required
+- Apps compose domains and must not contain business logic
+- `core` and `shared` must never depend on domain libs
+- Boundaries are enforced by Sheriff
 
 ## Error Handling
 
