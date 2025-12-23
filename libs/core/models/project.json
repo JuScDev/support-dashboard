@@ -4,7 +4,7 @@
   "sourceRoot": "libs/core/models/src",
   "prefix": "lib",
   "projectType": "library",
-  "tags": [],
+  "tags": ["domain:core", "type:models"],
   "targets": {
     "test": {
       "executor": "@nx/vitest:test",

@@ -4,7 +4,7 @@
   "sourceRoot": "libs/core/data-access/src",
   "prefix": "lib",
   "projectType": "library",
-  "tags": [],
+  "tags": ["domain:core", "type:data-access"],
   "targets": {
     "test": {
       "executor": "@nx/vitest:test",

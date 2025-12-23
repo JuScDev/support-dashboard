@@ -17,8 +17,61 @@ export default [
           allow: ['^.*/eslint(\\.base)?\\.config\\.[cm]?[jt]s$'],
           depConstraints: [
             {
-              sourceTag: '*',
+              sourceTag: 'type:app',
               onlyDependOnLibsWithTags: ['*'],
+            },
+            {
+              sourceTag: 'type:e2e',
+              onlyDependOnLibsWithTags: ['type:app'],
+            },
+            {
+              sourceTag: 'type:models',
+              onlyDependOnLibsWithTags: ['type:models', 'type:api'],
+            },
+            {
+              sourceTag: 'type:ui',
+              onlyDependOnLibsWithTags: ['type:ui', 'type:models', 'type:api'],
+            },
+            {
+              sourceTag: 'type:data-access',
+              onlyDependOnLibsWithTags: ['type:models', 'type:api'],
+            },
+            {
+              sourceTag: 'type:feature',
+              onlyDependOnLibsWithTags: [
+                'type:models',
+                'type:data-access',
+                'type:api',
+                'type:ui',
+                'type:feature',
+              ],
+            },
+            {
+              sourceTag: 'type:api',
+              onlyDependOnLibsWithTags: ['type:models', 'type:data-access', 'type:api', 'type:ui'],
+            },
+
+            {
+              sourceTag: 'domain:core',
+              onlyDependOnLibsWithTags: ['domain:core', 'domain:shared', 'type:api'],
+            },
+
+            {
+              sourceTag: 'domain:shared',
+              onlyDependOnLibsWithTags: ['domain:shared', 'domain:core', 'type:api'],
+            },
+
+            {
+              sourceTag: 'domain:tickets',
+              onlyDependOnLibsWithTags: ['domain:tickets', 'domain:core', 'domain:shared'],
+            },
+            {
+              sourceTag: 'domain:dashboard',
+              onlyDependOnLibsWithTags: ['domain:dashboard', 'domain:core', 'domain:shared'],
+            },
+            {
+              sourceTag: 'domain:users',
+              onlyDependOnLibsWithTags: ['domain:users', 'domain:core', 'domain:shared'],
             },
           ],
         },
