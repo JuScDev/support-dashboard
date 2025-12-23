@@ -12,13 +12,13 @@ This project is a **professional Angular 21 application** built with the followi
 - Vitest for unit/component tests
 - Playwright for E2E tests
 - ESLint + Prettier
-- Sheriff for enforcing module boundaries
+- Nx ESLint Module Boundaries for enforcing module boundaries
 
 ## Architecture Principles
 
 - Domain-driven design with explicit bounded contexts
 - Domain libraries under `libs/` for Tickets, Dashboard, Users; platform libraries `core` and `shared`
-- Clear separation of concerns and boundaries enforced by Sheriff
+- Clear separation of concerns and boundaries enforced by Nx ESLint Module Boundaries
 - No cross-domain imports except through approved contracts (e.g., shared types/services)
 - Global state via Signal Stores; local UI state via Signals
 - Business logic must NOT live in components
@@ -30,7 +30,7 @@ This project is a **professional Angular 21 application** built with the followi
 - Platform libs live in `libs/core` (infrastructure, shell) and `libs/shared` (UI atoms/utilities)
 - Domain libs may depend on `core` and `shared`; avoid lateral domain-to-domain deps
 - `core` and `shared` must never depend on domain libs
-- All boundaries are enforced via Sheriff
+- All boundaries are enforced via Nx ESLint Module Boundaries
 
 ## Coding Guidelines
 

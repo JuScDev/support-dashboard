@@ -24,7 +24,7 @@
 - Avoid lateral domain-to-domain dependencies; use shared contracts when cross-domain data is required
 - Apps compose domains and must not contain business logic
 - `core` and `shared` must never depend on domain libs
-- Boundaries are enforced by Sheriff
+- Boundaries are enforced by Nx ESLint Module Boundaries
 
 ## Error Handling
 

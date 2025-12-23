@@ -26,7 +26,7 @@ Build a realistic, maintainable frontend application that demonstrates:
 - RxJS & Signals
 - Angular Material
 - Nx
-- Sheriff (Module boundaries)
+- Nx ESLint Module Boundaries
 - Vitest
 - Playwright
 - ESLint & Prettier
@@ -36,7 +36,7 @@ Build a realistic, maintainable frontend application that demonstrates:
 - Domain-driven design with bounded contexts for Tickets, Dashboard, and Users
 - Domain code lives in `libs/<domain>`; platform layers in `libs/core` (infrastructure) and `libs/shared` (UI/utils)
 - Apps compose domain libraries; keep business logic out of `apps/`
-- Clear module boundaries enforced by Sheriff
+- Clear module boundaries enforced by Nx ESLint Module Boundaries
 - Business logic lives in services and stores; UI components remain lean
 
 ## 🧪 Testing Strategy
